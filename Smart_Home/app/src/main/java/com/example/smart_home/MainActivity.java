@@ -1,5 +1,6 @@
 package com.example.smart_home;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -20,5 +21,8 @@ public class MainActivity extends AppCompatActivity {
     public void IniciarSesion(){
         Intent intent = new Intent(this, InicioSesion.class);
         startActivity(intent);
+    }
+
+    public void startActivity(Intent intent) {
     }
 }
