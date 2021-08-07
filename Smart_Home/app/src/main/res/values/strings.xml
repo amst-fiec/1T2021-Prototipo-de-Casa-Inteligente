@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Smart Home</string>
-    <string name="texto_menu">Menú principal</string>
-    <string name="temp_btn">Analisis de temperatura</string>
-    <string name="estado_btn">Estado del hogar</string>
-    <string name="salir">Salir</string>
-    <string name="descripcion_estado">Presenta el nivel de confort (temperatura y humedad)</string>
-    <string name="descripcion_temp">Presenta el estado de los sensores en tiempo real </string>
-</resources>
