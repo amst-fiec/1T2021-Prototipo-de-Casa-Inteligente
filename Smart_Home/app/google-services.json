@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "433799245551",
+    "project_id": "smarthome-98ead",
+    "storage_bucket": "smarthome-98ead.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433799245551:android:c8f2e3af8ec739c14b351a",
+        "android_client_info": {
+          "package_name": "com.example.smart_home"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433799245551-neg800iu0viritghrj91vk1fnnel4qn0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smart_home",
+            "certificate_hash": "0023b39916ee74af043e3f28afe4100a10e66eaf"
+          }
+        },
+        {
+          "client_id": "433799245551-qrk0gq4718ahhe9r2ghh8vimvb6iiopb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVgBt3EKw33XYQ5yOnxyX-Q9NeYosLfy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433799245551-qrk0gq4718ahhe9r2ghh8vimvb6iiopb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
