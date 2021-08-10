@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Smart_Home">
-        <activity android:name=".Temperatura"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Temperatura" />
         <activity android:name=".Menu_Consultas" />
-        <activity android:name=".Inicio_Sesion" />
         <activity android:name=".Estado_Hogar" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

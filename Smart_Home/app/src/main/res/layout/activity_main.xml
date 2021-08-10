@@ -1,59 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#343966EF"
-
-    android:orientation="vertical"
+    android:layout_gravity="center"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:text="Smart Home"
-        android:textColor="@color/black"
-        android:textColorHighlight="@color/black"
-        android:textSize="36dp"
-        android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:text="Bienvenido"
-        android:textColor="@color/black"
-        android:textColorHighlight="@color/black"
-        android:textSize="24dp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="220dp"
-        android:layout_height="220dp"
-        android:layout_gravity="center"
-        app:srcCompat="@drawable/logo2" />
-
-    <Button
-        android:id="@+id/btnIniciarS"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="100dp"
-        android:background="#6AC34A"
-        android:onClick="IniciarSesion"
-        android:text="Iniciar Sesion" />
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="350dp"
-        android:layout_marginTop="180dp"
-        android:text="Ver 1.0" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="500px"
+            app:srcCompat="@drawable/logo" />
+        <EditText
+            android:id="@+id/editTextUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Usuario"
+            android:inputType="textEmailAddress" />
+        <EditText
+            android:id="@+id/editTextPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#5DCFDF"
+            android:text="Iniciar Sesión"
+            android:textColor="#F3EDED" />
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#7B30C5"
+            android:text="Registrarse"
+            android:textColor="#F3EDED" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btnLoginGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="#5CC9D8"
+            android:text="Iniciar Sesión con Google"
+            android:textColor="#F3EDED" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
