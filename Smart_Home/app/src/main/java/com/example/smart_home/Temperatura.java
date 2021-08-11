@@ -11,4 +11,7 @@ public class Temperatura extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_temperatura);
     }
+
+
+
 }
