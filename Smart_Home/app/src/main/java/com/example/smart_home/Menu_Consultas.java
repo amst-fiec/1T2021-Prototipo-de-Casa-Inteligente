@@ -35,5 +35,12 @@ public class Menu_Consultas extends AppCompatActivity {
 
 
     }
+    public void cerrarSesion(View view){
+        FirebaseAuth.getInstance().signOut();
+        finish();
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("msg", "cerrarSesion");
+        startActivity(intent);
+    }
 
 }
