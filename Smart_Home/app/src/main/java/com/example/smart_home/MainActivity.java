@@ -51,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        Intent intent = getIntent();
+        String msg = intent.getStringExtra("msg");
+        if(msg != null){
+            if(msg.equals("cerrarSesion")){
+                cerrarSesion();
+            }
+        }
     }
 
     private void InitializateComponents(){//Dummy branch, the commits of the autor was upload directly on main branch
@@ -146,6 +154,10 @@ public class MainActivity extends AppCompatActivity {
                 // Google Sign In failed, update UI appropriately
             }
         }
+    }
+    private void cerrarSesion() {
+        mGoogleSignInClient.signOut().addOnCompleteListener(this,
+        task -> updateUI(null));
     }
 
 }
