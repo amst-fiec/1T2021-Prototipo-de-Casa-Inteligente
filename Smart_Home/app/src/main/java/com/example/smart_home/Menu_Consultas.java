@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Menu_Consultas extends AppCompatActivity {
 
     Button btn_consultar_estado, btn_analizar_temperatura;

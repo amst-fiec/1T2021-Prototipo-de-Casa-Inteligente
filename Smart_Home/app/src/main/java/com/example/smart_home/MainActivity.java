@@ -20,7 +20,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -158,6 +161,22 @@ public class MainActivity extends AppCompatActivity {
     private void cerrarSesion() {
         mGoogleSignInClient.signOut().addOnCompleteListener(this,
         task -> updateUI(null));
+    }
+
+    private void updateUI(FirebaseUser user) {
+        if (user != null) {
+            HashMap<String, String> info_user = new HashMap<String, String>();
+            info_user.put("user_name", user.getDisplayName());
+            info_user.put("user_email", user.getEmail());
+            info_user.put("user_photo", String.valueOf(user.getPhotoUrl()));
+            info_user.put("user_id", user.getUid());
+            finish();
+            Intent intent = new Intent(this, Estado_Hogar.class);
+            intent.putExtra("info_user", info_user);
+            startActivity(intent);
+        } else {
+            System.out.println("sin registrarse");
+        }
     }
 
 }
