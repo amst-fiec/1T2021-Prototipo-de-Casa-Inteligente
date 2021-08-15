@@ -25,24 +25,25 @@ public class Estado_Hogar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_estado_hogar);
-        db_reference = FirebaseDatabase.getInstance().getReference().child("Lecturas");
-        iniciarBaseDeDatos();
+        db_reference = FirebaseDatabase.getInstance().getReference().child("lecturas");
+        //iniciarBaseDeDatos();
         leer_sensores();
     }
 
     //Funcion para hacer la lectura a la base
     public void leer_sensores(){
+
         db_reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    mostrarLecturasGasSound(snapshot);
+                    //mostrarLecturasGasSound(snapshot);
                     det_confort(snapshot);
                 }
             }
             @Override
             public void onCancelled(DatabaseError error) {
-                System.out.println(error.toException());
+                System.out.println(error.toException().toString()); //El error puede no ser un String
             }
         });
     }
@@ -70,8 +71,13 @@ public class Estado_Hogar extends AppCompatActivity {
     public void det_confort(DataSnapshot snapshot){
 
         float aux_temp, aux_humed;
-        aux_temp = (float) snapshot.child("Lecturas").child("DHT11").child("temp").getValue();
+        /*aux_temp = (float) snapshot.child("Lecturas").child("DHT11").child("temp").getValue();
         aux_humed = (float) snapshot.child("Lecturas").child("DHT11").child("humed").getValue();
+
+         */
+
+        aux_temp = (float) snapshot.child("lecturas").child("temp").getValue();
+        aux_humed = (float) snapshot.child("lecturas").child("humed").getValue();
 
         tv_temp = findViewById(R.id.tv_temp);
         tv_hume = findViewById(R.id.tv_hume);
