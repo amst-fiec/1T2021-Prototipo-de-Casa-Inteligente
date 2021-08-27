@@ -65,26 +65,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void InitializateComponents(){//Dummy branch, the commits of the autor was upload directly on main branch
-        txt_email = (EditText) findViewById(R.id.editTextUsuario);
-        txt_pass = (EditText) findViewById(R.id.editTextPass);
-
-        btn_iniciar_sesion = (Button) findViewById(R.id.btnLogin);
-        btn_iniciar_sesion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String email = txt_email.getText().toString();
-                String pass = txt_pass.getText().toString();
-
-                if(!email.isEmpty() && !pass.isEmpty()){
-                    iniciarSesion(email,pass);
-                }
-                else{
-                    Toast.makeText(MainActivity.this, "Ingrese su usuario y contraseña",
-                            Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
 
         btn_iniciar_sesion_Google = (Button) findViewById(R.id.btnLoginGoogle);
         btn_iniciar_sesion_Google.setOnClickListener(new View.OnClickListener() {
@@ -93,27 +73,6 @@ public class MainActivity extends AppCompatActivity {
                 signInGoogle();
             }
         });
-
-    }
-
-    private void iniciarSesion(String email,String password){
-
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            //To Menu Activity
-                            Intent intent= new Intent(MainActivity.this, Menu_Consultas.class);
-                            startActivity(intent);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Toast.makeText(MainActivity.this, "Usuario o contraseña incorrecta.",
-                                    Toast.LENGTH_SHORT).show();
-                            txt_pass.setText("");
-                        }
-                    }
-                });
 
     }
 

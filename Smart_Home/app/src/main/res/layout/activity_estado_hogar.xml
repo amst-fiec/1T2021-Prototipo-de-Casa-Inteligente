@@ -157,7 +157,7 @@
                             android:layout_width="56dp"
                             android:layout_height="61dp"
                             android:layout_marginLeft="130dp"
-                            android:src="@drawable/dht11"
+                            android:src="@drawable/gas"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.983"
@@ -218,7 +218,7 @@
                             android:layout_width="56dp"
                             android:layout_height="61dp"
                             android:layout_marginLeft="130dp"
-                            android:src="@drawable/gas"
+                            android:src="@drawable/dht11"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.579"
@@ -252,7 +252,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/textView9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -273,7 +273,7 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/imageView5"
+                            android:id="@+id/imageView6"
                             android:layout_width="56dp"
                             android:layout_height="61dp"
                             android:layout_marginLeft="130dp"
@@ -289,6 +289,47 @@
                             android:id="@+id/tv_sound"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="Estado" />
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#90000000"
+                android:gravity="center"
+                android:text="Estado de la bateria:"
+                android:textColor="#CFCDCD"
+                android:textSize="22dip"
+                android:textStyle="bold" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_bat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:text="Estado" />

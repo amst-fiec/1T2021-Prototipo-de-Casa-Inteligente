@@ -25,40 +25,7 @@
             android:layout_height="250dp"
 
             app:srcCompat="@drawable/logo3"/>
-        <EditText
-            android:id="@+id/editTextUsuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            style="@style/FirebaseUI.TextInputEditText.EmailField"
-            android:ems="10"
-            android:hint="Mail"
-            android:inputType="textEmailAddress" />
-        <EditText
-            android:id="@+id/editTextPass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            style="@style/FirebaseUI.TextInputEditText.PasswordField"
-            android:ems="10"
-            android:hint="Pass"
-            android:inputType="textPassword" />
 
-        <Button
-            android:id="@+id/btnLogin"
-            android:text="iniciar sesion"
-            android:textColor="#FFFFFF"
-            android:layout_gravity="center"
-            android:textSize="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_shape"
-            android:shadowColor="#0726ED"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="5"
-            />
 
         <Button
             android:id="@+id/btnLoginGoogle"
@@ -68,7 +35,7 @@
             android:textSize="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="75dp"
             android:background="@drawable/button_shape"
             android:shadowColor="#0726ED"
             android:shadowDx="0"
