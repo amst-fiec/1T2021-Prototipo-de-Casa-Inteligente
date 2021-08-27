@@ -11,7 +11,7 @@
         android:theme="@style/Theme.Smart_Home"
         android:versionCode="1"
         android:versionName="1.0">
-        <activity android:name=".Sensor"></activity>
+        <activity android:name=".Sensor" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Temperatura" />
         <activity android:name=".Menu_Consultas" />
