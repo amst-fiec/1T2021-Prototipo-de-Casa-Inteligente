@@ -191,6 +191,9 @@ public class Estado_Hogar extends AppCompatActivity {
     //HU2 - Act5
     //Función para determinar fuga de gas
     public void eval_Gas(Double g){
+        String titulo = "Gas detectado";
+        String alerta = "Se ha detectado un nivel anormal de gas";
+        int n_id = 2;
         if (g!=0.0){//Evaluar que el valor no sea 0, caso contrario notificar
             tv_gas = findViewById(R.id.tv_gas);
             String estat_gas_level ="n/a";
@@ -198,21 +201,22 @@ public class Estado_Hogar extends AppCompatActivity {
             if(g > 159 ){
                 estat_gas_level = "Gas detectado";
                 toaster("Peligro de intoxicacion");
+                notificarFallo(titulo, alerta, n_id);
             } else if(g >90 && g < 159){
                 estat_gas_level = "Gas detectado";
                 toaster("Peligro de incendio");
+                notificarFallo(titulo, alerta, n_id);
             }else if(g >50 && g < 90){
                 estat_gas_level = "Nivel de gas al límite";
                 toaster("Peligro de incendio");
+                notificarFallo(titulo, alerta, n_id);
             }else if(g < 50){
                 estat_gas_level = "Nivel normal";
             }
             //Agregar text view para mostrar nivel de gas
             tv_gas.setText(estat_gas_level);
-            String titulo = "Gas detectado";
-            String alerta = "Se ha detectado un nivel anormal de gas";
-            int n_id = 2;
-            notificarFallo(titulo, alerta, n_id);
+
+
         }else {
             toaster("Valores en 0, revise el dispositivo");
         }
